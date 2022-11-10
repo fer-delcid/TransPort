@@ -3,23 +3,36 @@
 :root {
     --blanco: #FFFFFF;
     --primario: #FF4B2B;
-    --secundario: #326789;
+    --secundario: #222;
+	--gris: #757575;
     --oscuro: #222;
 }
 
+html {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100%;
+    scroll-snap-type: y mandatory;
+}
+/*
 * {
 	box-sizing: border-box;
+} */
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
 	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
+	//flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
+	//height: 100vh;
+	//margin: -20px 0 50px;
+	min-height: 50%;
 }
 
 h1 {
@@ -29,6 +42,7 @@ h1 {
 
 h2 {
 	text-align: center;
+	color: var(--primario);
 }
 
 p {
@@ -88,6 +102,7 @@ input {
 }
 
 .container {
+	margin: 50px auto;
 	background-color: var(--blanco);
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -209,6 +224,199 @@ input {
 	transform: translateX(20%);
 }
 
+header{
+    padding-top: 2px;
+    padding-bottom: 2px;
+   /* background-color: var(--blanco); */
+}
+
+.contenedor {
+	margin: 0 auto;
+	max-width: 1200px;
+  }
+  
+.sombra {
+	padding: 2rem;
+	margin-bottom: 3rem;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+	-moz-box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+	box-shadow: 0px 11px 15px -9px rgba(0,0,0,0.63);
+  }
+
+
+.nav-bg {
+	border-radius: 5px;
+	margin-bottom: 1rem ;
+	background-color: var(--secundario);
+  }
+  .navegacion {
+	scroll-snap-align: center;
+	scroll-snap-stop: always;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  @media (min-width:768px) {
+	.navegacion {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+  }
+  .navegacion a{
+	padding: 1rem 2rem;
+	color: var(--blanco);
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: lighter;
+  }
+
+  .navegacion a:hover {
+	border-radius: 2.5px;
+	background-color: var(--primario);
+	color: var(--blanco);
+  }
+  .navegacion a:last-of-type {
+	margin-bottom:0;
+  }
+  @media (min-width:768px) {
+	.navegacion a{
+		margin-bottom: 0;
+	}
+  }
+
+  .textos{
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+
+  .textos blockquote {
+	color: var(--primario);
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+}
+
+.textos img{
+	border-radius: 8px;
+	height: 400px;
+	width: 500px;
+}
+
+.texto2{
+	margin-top: 80px;
+}
+
+.contacto{
+	margin-top: 80px;
+}
+
+.formulario {
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--blanco);
+    margin-bottom: 2rem;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+@media (min-width:768px) {
+    .formulario {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+.contenedor-campos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.campo {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+@media (min-width:480px) {
+    .campo {
+        display: flex;
+        align-items: center;
+    }
+}
+@media (min-width: 768px) {
+    .campo{
+        flex: 0 0 calc(50% - .5rem)
+    }
+}
+.campo label {
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+@media (min-width:480px) {
+    .campo label {
+        flex: 0 0 90px;
+    }
+}
+.campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="mail"],
+.campo textarea {
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+}
+@media (min-width: 768px) {
+    :is(.campo) :is( 
+        input[type="text"], 
+        input[type="text"],  
+        input[type="tel"],  
+        input[type="mail"] , 
+        textarea ) {
+        flex: 1;
+    }
+}
+
+.w-100{
+    flex: 0 0 100%;
+}
+.campo textarea {
+    height: 4rem;
+}
+
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.boton{
+	background-color: var(--primario);
+    color: var(--blanco);
+    margin-top: .5rem;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border:none;
+}
+
+.boton hover{
+    cursor: pointer;
+}
 
 footer {
     background-color: var(--oscuro);
