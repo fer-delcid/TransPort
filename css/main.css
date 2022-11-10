@@ -47,6 +47,26 @@ p {
   margin: 20px 0 30px;
 }
 
+header {
+  font-size: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  /* background-color: var(--blanco); */
+}
+
+.contenedor {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.sombra {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+}
+
+/* Contendio Login*/
 button {
   border-radius: 5px;
   border: 1px solid var(--primario);
@@ -225,25 +245,7 @@ input {
   transform: translateX(20%);
 }
 
-header {
-  font-size: 30px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  /* background-color: var(--blanco); */
-}
-
-.contenedor {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.sombra {
-  padding: 2rem;
-  margin-bottom: 3rem;
-  border-radius: 10px;
-  box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-}
-
+/* Nav Bar*/
 .nav-bg {
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -287,6 +289,7 @@ header {
     margin-bottom: 0;
   }
 }
+/* Contenedores de inicio, nosotros*/
 .textos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -311,6 +314,7 @@ header {
   margin-top: 80px;
 }
 
+/* Contacto */
 .contacto {
   margin-top: 80px;
 }
@@ -426,6 +430,222 @@ textarea) {
   cursor: pointer;
 }
 
+/*Ventas de camiones*/
+.anuncio img {
+  width: 360px;
+  height: 300px;
+}
+
+.venta-camiones blockquote {
+  text-align: center;
+  color: var(--primario);
+  font-weight: lighter;
+  font-size: 2rem;
+  padding: 1rem 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .contenedor-anuncios {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.anuncio {
+  border-radius: 5px;
+  border: 1px solid #B5B5B5;
+  background-color: #F5F5F5;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .anuncio {
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
+.contenido-anuncio {
+  padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+  margin: 0;
+}
+
+.precio {
+  color: var(--primario);
+  font-weight: 700;
+}
+
+.iconos-caracteristicas {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  max-width: 500px;
+}
+
+.iconos-caracteristicas li {
+  /* flex: 1; */
+  display: flex;
+}
+
+.iconos-caracteristicas li img {
+  margin-right: 2rem;
+}
+
+.ver-todas {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Venta de Maquinaria*/
+.venta-maquinaria blockquote {
+  text-align: center;
+  color: var(--primario);
+  font-weight: lighter;
+  font-size: 2rem;
+  padding: 1rem 0 1rem 0;
+}
+
+/* Creditos */
+.creditos blockquote {
+  text-align: center;
+  color: var(--primario);
+  font-weight: lighter;
+  font-size: 2rem;
+  padding: 1rem 0 1rem 0;
+}
+
+.cartas {
+  padding: 1em 0;
+}
+
+.snip1468 {
+  border: solid 1px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  max-height: 230px;
+  width: 100%;
+  color: var(--oscuro);
+  text-align: left;
+  font-size: 16px;
+  background-color: var(--oscuro);
+  line-height: 1.2em;
+  display: inline-block;
+}
+
+.snip1468 *,
+.snip1468 *:before,
+.snip1468 *:after {
+  box-sizing: border-box;
+  transition: all 0.25s linear;
+}
+
+.snip1468 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1468 figcaption {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  padding: 10px 20px;
+  background-color: var(--blanco);
+  transition-delay: 0.3s;
+}
+
+.txtC,
+.txtP {
+  transform: translateY(10px);
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  transition-delay: 0.3s;
+}
+
+.txtC {
+  text-transform: uppercase;
+  font-weight: lighter;
+  text-align: left;
+  color: var(--secundario);
+}
+
+.txtP {
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.snip1468 i {
+  position: absolute;
+  color: #fff;
+  font-size: 34.11764706px;
+  line-height: 58px;
+  width: 58px;
+  top: 0;
+  right: 0;
+  background-color: #e67e22;
+  text-align: center;
+  transform: translateX(58px);
+}
+
+.snip1468 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.snip1468:hover img,
+.snip1468.hover img {
+  zoom: 1;
+  filter: alpha(opacity=30);
+  -webkit-opacity: 0.3;
+  opacity: 0.3;
+  transform: translateY(40px);
+}
+
+.snip1468:hover figcaption,
+.snip1468.hover figcaption,
+.snip1468:hover h3,
+.snip1468.hover h3,
+.snip1468:hover p,
+.snip1468.hover p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.snip1468:hover figcaption,
+.snip1468.hover figcaption {
+  transition-delay: 0s;
+}
+
+.snip1468:hover h3,
+.snip1468.hover h3 {
+  transition-delay: 0.3s;
+}
+
+.snip1468:hover p,
+.snip1468.hover p {
+  transition-delay: 0.45s;
+  opacity: 0.5;
+}
+
+.snip1468:hover i,
+.snip1468.hover i {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+/*Footer*/
 footer {
   background-color: var(--oscuro);
   color: var(--blanco);
@@ -440,4 +660,8 @@ footer {
 
 footer p {
   margin: 10px 0;
+}
+
+.copyright {
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */
